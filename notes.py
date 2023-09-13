@@ -27,7 +27,8 @@ print(lane_tech.reverse())
 print(lane_tech)
 z = lane_tech.pop() #pop() prints out last value of array (pop(3) prints out the 3rd index)
 print(z)
-print("HERE: " + lane_tech)
+print("HERE: " + str(lane_tech)) # cannot concatenate other variable types than string using the "Java" way.
+                                 # if you use this way, you must convert the variable to string.
 
 
 # Indices
@@ -73,13 +74,14 @@ assert add_two(0) == 2, "add_two with input 0 test"
 # For Loop Template 1
 # do something for each item in a list
 lst = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-for el in lst:
+for el in lst:                  # for each element in the list
     print(el)
 
 # For Loop Template 2
 # do something n times
-for i in range(5):
-    print("Intro to AI")
+print(list(range(5)))
+for i in range(5):              # range(5) prints "Intro to AI" 5 times. Range = 0,5.
+    print("Intro to AI")        # indentation matters
 
 # For Loop Template 3
 # do something for each item in a list but we care about the index
@@ -91,11 +93,12 @@ print(lst)
 
 # Dictionaries
 
-dict = {"name": "rob", "age": 30}
+dict = {"name": "rob", "age": 30} # data structure that stores things; name & age are keys which you call
 print(dict["age"])
+print(dict['name']) # no difference between double quotes and single quotes
 
 # Random
-import random
+import random # you import libraries a lot
 
 food = ['pizza', 'carrots', 'eggs']
 dinner = random.choice(food)
@@ -105,5 +108,6 @@ print(dinner)
 age = 25
 # print("Mary is " + age + " years old")
 print(f"Mary is {age} years old")
+print("Mary is ", age, "years old") # accounts for spaces
 
 
