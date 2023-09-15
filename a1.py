@@ -87,10 +87,11 @@ def median(lst: List[int]) -> float:
     middle_num = len(lst) / 2
 
     if len(lst) % 2 == 1: 
-        return float(lst[middle_num])
-    else:  
-        middle_values = lst[middle_num - 1 : middle_num + 1]
-        return float(sum(middle_values) / 2)
+        return lst[len(lst)//2]
+    else:
+        el1 = lst[len(lst)//2]
+        el2 = lst[len(lst)//2 -1 ]
+        return (el1+el2)/2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -121,6 +122,8 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
         lst.pop(index)
     
     return lst
+
+    
 
     
 
